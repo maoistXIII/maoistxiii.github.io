@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/communism.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/communism.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/communism.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"maoistxiii.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.12.3","exturl":false,"sidebar":{"display":"remove","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="书接「上文」 众所周知，密码可以做到防止被暴力破解，但是脑子不能。对此，最简单粗暴又有效的方法当然是「从一开始就没记住」，这种方法在文件加密和硬盘加密上的应用早就不是什么新鲜事了： TrueCrypt——文件加密的法宝 @ 编程随想的博客扫盲 VeraCrypt——跨平台的 TrueCrypt 替代品 @ 编程随想的博客 接下来是重量级文章，教你如何通过微波炉烤U盘等方法销毁你本来就没记住的密钥：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="密码如何对抗大记忆恢复术">
+<meta property="og:url" content="https://maoistxiii.github.io/2da4fd39/">
+<meta property="og:site_name" content="廻車">
+<meta property="og:description" content="书接「上文」 众所周知，密码可以做到防止被暴力破解，但是脑子不能。对此，最简单粗暴又有效的方法当然是「从一开始就没记住」，这种方法在文件加密和硬盘加密上的应用早就不是什么新鲜事了： TrueCrypt——文件加密的法宝 @ 编程随想的博客扫盲 VeraCrypt——跨平台的 TrueCrypt 替代品 @ 编程随想的博客 接下来是重量级文章，教你如何通过微波炉烤U盘等方法销毁你本来就没记住的密钥：">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-18T14:23:39.000Z">
+<meta property="article:modified_time" content="2022-08-18T14:25:59.060Z">
+<meta property="article:author" content="carriageReturnXIII | 廻車">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://maoistxiii.github.io/2da4fd39/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://maoistxiii.github.io/2da4fd39/","path":"2da4fd39/","title":"密码如何对抗大记忆恢复术"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>密码如何对抗大记忆恢复术 | 廻車</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">廻車</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">打倒现代修正主义！打倒社会帝国主义</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://maoistxiii.github.io/2da4fd39/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="carriageReturnXIII | 廻車">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="廻車">
+      <meta itemprop="description" content="马克思列宁毛主义万岁！无产阶级文化大革命万岁！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="密码如何对抗大记忆恢复术 | 廻車">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          密码如何对抗大记忆恢复术
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-18 22:23:39 / 修改时间：22:25:59" itemprop="dateCreated datePublished" datetime="2022-08-18T22:23:39+08:00">2022-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%9D%E5%AF%86/" itemprop="url" rel="index"><span itemprop="name">保密</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%9D%E5%AF%86/%E5%8A%A0%E5%AF%86/" itemprop="url" rel="index"><span itemprop="name">加密</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%9D%E5%AF%86/%E5%9F%BA%E6%9C%AC/" itemprop="url" rel="index"><span itemprop="name">基本</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>书接「<a href="https://maoistxiii.github.io/59831425/">上文</a>」</p>
+<p>众所周知，密码可以做到防止被暴力破解，但是脑子不能。对此，最简单粗暴又有效的方法当然是「从一开始就没记住」，这种方法在文件加密和硬盘加密上的应用早就不是什么新鲜事了：</p>
+<p><a target="_blank" rel="noopener" href="https://program-think.blogspot.com/2011/05/recommend-truecrypt.html">TrueCrypt——文件加密的法宝 @ 编程随想的博客</a><br><a target="_blank" rel="noopener" href="https://program-think.blogspot.com/2015/10/VeraCrypt.html">扫盲 VeraCrypt——跨平台的 TrueCrypt 替代品 @ 编程随想的博客</a></p>
+<p>接下来是重量级文章，教你如何通过微波炉烤U盘等方法销毁你本来就没记住的密钥：</p>
+<p><a target="_blank" rel="noopener" href="https://program-think.blogspot.com/2019/02/Use-Disk-Encryption-Anti-Computer-Forensics.html">如何用“磁盘加密”对抗警方的【取证软件】和【刑讯逼供】，兼谈数据删除技巧 @ 编程随想的博客</a></p>
+<p>以上三篇（需要翻墙）便是我接下来要介绍的经验的「前置条件」。前面两篇相当于Veracrypt教程，就版本来说年代稍微有些久远，只不过因为第三篇是编程随想写的我就顺便把前传贴上来了，建议自己去别处找个Veracrypt的使用教程，或者直接去看<a target="_blank" rel="noopener" href="https://veracrypt.fr/">官网</a>。</p>
+<span id="more"></span>
+
+<p>总之，防止大记忆恢复术的关键在于「使用自己根本记不住的单个或多个密钥文件进行加密，在遭到逮捕时迅速将密钥文件销毁」。但问题在于，「编程随想」这套办法只能用在文件或硬盘的加密上，并不能用来让你忘掉你的帐号密码。因此，要解决这个问题，就要将<strong>拥有自动填充功能的密码管理器所在虚拟机操作系统的虚拟硬盘文件使用Veracrypt加密</strong>。你可能会问，既然Veracrypt可以加密整个系统，为啥还得虚拟机呢？很遗憾，因为加密操作系统并不支持使用密钥文件。当你注册账号的时候，就应当选择使用放在Veracrypt加密卷里面的虚拟机，用各种方法构造一个你没记住（根本记不住）的密码，然后储存在密码管理器内，登录账号时再使用自动填充，这样一来，只要在遭到刑讯逼供之前，让能解锁这个虚拟机的东西从这个世界上彻底消失，就避免了你被迫回忆其任何东西的可能。</p>
+<h2 id="生成根本记不住的密码的方法"><a href="#生成根本记不住的密码的方法" class="headerlink" title="生成根本记不住的密码的方法"></a>生成根本记不住的密码的方法</h2><p>前头提到那个书接上文的上文，介绍过通过对「种子」求散列运算构造密码的方法，很遗憾，因为你还记得种子是什么，所以专政机关会帮你想起来。因此，所谓根本记不住的密码，必须得是自动生成的字符串。</p>
+<h3 id="pwgen"><a href="#pwgen" class="headerlink" title="pwgen"></a>pwgen</h3><p>对于GNU&#x2F;Linux系统，最好使用<code>pwgen</code>来生成密码，你应当使用包管理器来安装它。</p>
+<p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwgen [ OPTION ] [ pw_length ] [ num_pw ]</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">-c or –capitalize</span><br><span class="line">密码中至少包含一个大写字母</span><br><span class="line"></span><br><span class="line">-A or –no-capitalize</span><br><span class="line">密码中不包含大写字母</span><br><span class="line"></span><br><span class="line">-n or –numerals</span><br><span class="line">密码中至少包含一个数字</span><br><span class="line"></span><br><span class="line">-0 or –no-numerals</span><br><span class="line">密码中不包含数字</span><br><span class="line"></span><br><span class="line">-y or –symbols</span><br><span class="line">密码中至少包含一个特殊符号</span><br><span class="line"></span><br><span class="line">-s or –secure</span><br><span class="line">生成完全随机密码</span><br><span class="line"></span><br><span class="line">-B or –ambiguous</span><br><span class="line">密码中不包含歧义字符（例如1,l,O,0）</span><br><span class="line"></span><br><span class="line">-H or –sha1=path/to/file[#seed]</span><br><span class="line">使用SHA1 hash给定的文件作为一个随机种子</span><br><span class="line"></span><br><span class="line">-C</span><br><span class="line">在列中打印生成的密码</span><br><span class="line"></span><br><span class="line">-1</span><br><span class="line">不要在列中打印生成的密码，即一行一个密码</span><br><span class="line"></span><br><span class="line">-v or –no-vowels</span><br><span class="line">不要使用任何元音</span><br></pre></td></tr></table></figure>
+
+<p>例子：生成20个带大写、带符号、带数字、完全随机的14位密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ pwgen -cnys 14 20</span><br><span class="line">mQ3E=vfGfZ,5[B #zmj&#123;i5|ZS)&#123;jg Ht_8i7OqJ%N`~2 443fa5iJ\W-L?] ?Qs$o=vz2vgQBR</span><br><span class="line">^&#x27;Ry0Az|J9p2+0 t2oA/n7U_&#x27;|QRx EsX*%_(4./QCRJ ACr-,8yF9&amp;eM[* !Xz1C&#x27;bw?tv50o</span><br><span class="line">8hfv-fK(VxwQGS q!qj?sD7Xmkb7^ N#Zp\_Y2kr%!)~ 4*pwYs&#123;bq]Hh&amp;Y |4u=-Q1!jS~8=;</span><br><span class="line">]&#123;$N#FPX1L2B&#123;h I|01fcK.z?QTz&quot; l~]JD_,W%5bp.E +i2=D3;BQ&#125;p+$I n.a3,.D3VQ3~&amp;i</span><br></pre></td></tr></table></figure>
+<p>（注意：<code>$</code>是命令提示符，不包含在内，第一行以后是输出结果）</p>
+<h3 id="OpenSSL"><a href="#OpenSSL" class="headerlink" title="OpenSSL"></a>OpenSSL</h3><p><code>pwgen</code>只能在Linux上使用，而<code>OpenSSL</code>什么都支持，对应系统的安装方法请自己搜。<code>OpenSSL</code>主要通过调用各种密码学函数来生成密码，在此举一个常见用法：随即生成一个14位的<code>base64</code>字符串</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ openssl rand -base64 14</span><br><span class="line">WjzyDqdkWf3e53tJw/c=</span><br></pre></td></tr></table></figure>
+
+<h3 id="GnuPG"><a href="#GnuPG" class="headerlink" title="GnuPG"></a>GnuPG</h3><p><code>GnuPG</code>与<code>OpenSSL</code>同理：生成一个14位高强度密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ gpg --gen-random --armor 1 14</span><br><span class="line">jq1mtY4gBa6gIuJrggM=</span><br></pre></td></tr></table></figure>
+<h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><p>以上几种都是常见的加密工具、密码工具用来生成随机密码的方法，但要说最方便，还得是生成、储存、自动填充一起的浏览器，而说到浏览器要保障安全性，则首当其冲要选择<code>Firefox</code>（注意不要下载中国特供版）。</p>
+<h2 id="账号使用环境不安全？"><a href="#账号使用环境不安全？" class="headerlink" title="账号使用环境不安全？"></a>账号使用环境不安全？</h2><p>如果你成功让自己一开始就没记住密码，那么获得你所要登录的账号的密码的唯一途径便是在你使用帐号时进行攻击。</p>
+<p>所谓攻击大概有两种，一种是入侵你的系统，另一种则是站在你背后看着。对于后者我没什么可说的，不过倒是确实有那种FBI提前进你家装摄像头的剧本，这个归你自己管了，我帮不上忙。对于可能存在的操作系统被入侵的可能性怎么办呢？除了老生常谈的常规方法（决不是指安装杀毒软件，而是指安全的使用习惯），还有一点值得注意，咱们使用的——是虚拟机。</p>
+<p>对方要通过木马窃取你的密码，而且是窃取自动填充的密码，意味着木马必须在你进行「本次」登录操作前存在，这个木马是怎么来的呢？无非就是因为你下载了什么东西，别无第二种可能。因此，在保持「纯净」的状态下配置好自动填充服务，然后使用虚拟化软件建立这个纯净状态下的快照，并设置每次开关都恢复到这个快照，这样一来，木马在登录操作进行前存在就根本不可能。不过，恢复快照意味着虚拟硬盘的改动丢失，如果你要存什么文件，可以考虑搞另一块虚拟硬盘然后设置为「永久」，这样它就不受快照影响了（换句话说，此乃漏洞！）。</p>
+<p>既然存在这种离谱漏洞，在要求更加安全的情况下肯定是不能接受的。为此提出的解决办法是：这个纯净环境就一直让他纯净，不要使用，只用作输密码的「登录」。登录时选择记住登录状态，就会在浏览器里保存一个cookie，这样一来，网站只要看到这个cookie，就知道你的登录状态，而通过这个cookie并不能推算出密码。这时你再创建一个可以随便搅和的「使用环境」虚拟机，要登录的时候直接把这个cookie导入过来，就算有木马，他也看不见你的密码。（注意：cookie有时效）</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>carriageReturnXIII | 廻車
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://maoistxiii.github.io/2da4fd39/" title="密码如何对抗大记忆恢复术">https://maoistxiii.github.io/2da4fd39/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/59831425/" rel="prev" title="安全构造密码的两种方法">
+                  <i class="fa fa-chevron-left"></i> 安全构造密码的两种方法
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">廻車 | XIII</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
